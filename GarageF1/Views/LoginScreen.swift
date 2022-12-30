@@ -8,7 +8,8 @@
 import UIKit
 
 protocol loginScreenProtocol: AnyObject {
-    func actionLoginButton()
+    func actionLoginEmailButton()
+    func actionLoginFacebookButton()
 }
 
 class LoginScreen: UIView {
@@ -32,10 +33,11 @@ class LoginScreen: UIView {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Continuar com Apple", for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 22)
-        button.setTitleColor(.white, for: .normal)
+        button.setTitleColor(.black, for: .normal)
         button.clipsToBounds = true
+        button.setImage(UIImage(named: "appleicon"), for: .normal)
         button.layer.cornerRadius = 7.5
-        button.backgroundColor = UIColor(red: 61/255, green: 61/255, blue: 61/255, alpha: 1.0)
+        button.backgroundColor = UIColor(red: 247/255, green: 248/255, blue: 252/255, alpha: 1.0)
         //        button.addTarget(self, action: #selector(tappedLoginButton), for: .touchUpInside)
         return button
     }()
@@ -47,9 +49,10 @@ class LoginScreen: UIView {
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 22)
         button.setTitleColor(.white, for: .normal)
         button.clipsToBounds = true
+        button.setImage(UIImage(named: "facebookicon"), for: .normal)
         button.layer.cornerRadius = 7.5
-        button.backgroundColor = UIColor(red: 61/255, green: 61/255, blue: 61/255, alpha: 1.0)
-        //        button.addTarget(self, action: #selector(tappedLoginButton), for: .touchUpInside)
+        button.backgroundColor = UIColor(red: 22/255, green: 82/255, blue: 140/255, alpha: 1.0)
+        button.addTarget(self, action: #selector(tappedFacebookButton), for: .touchUpInside)
         return button
     }()
     
@@ -60,9 +63,10 @@ class LoginScreen: UIView {
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 22)
         button.setTitleColor(.white, for: .normal)
         button.clipsToBounds = true
+        button.setImage(UIImage(named: "iconeemail1"), for: .normal)
         button.layer.cornerRadius = 7.5
         button.backgroundColor = UIColor(red: 61/255, green: 61/255, blue: 61/255, alpha: 1.0)
-        button.addTarget(self, action: #selector(tappedLoginButton), for: .touchUpInside)
+        button.addTarget(self, action: #selector(tappedEmailButton), for: .touchUpInside)
         return button
     }()
     
@@ -84,8 +88,12 @@ class LoginScreen: UIView {
         addSubview(emailButton)
     }
     
-    @objc func tappedLoginButton(){
-        delegate?.actionLoginButton()
+    @objc func tappedFacebookButton(){
+        delegate?.actionLoginFacebookButton()
+    }
+    
+    @objc func tappedEmailButton(){
+        delegate?.actionLoginEmailButton()
     }
     
     private func configBackground() {

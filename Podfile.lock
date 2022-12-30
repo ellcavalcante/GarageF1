@@ -1,4 +1,12 @@
 PODS:
+  - FBAEMKit (15.1.0):
+    - FBSDKCoreKit_Basics (= 15.1.0)
+  - FBSDKCoreKit (15.1.0):
+    - FBAEMKit (= 15.1.0)
+    - FBSDKCoreKit_Basics (= 15.1.0)
+  - FBSDKCoreKit_Basics (15.1.0)
+  - FBSDKLoginKit (15.1.0):
+    - FBSDKCoreKit (= 15.1.0)
   - Firebase/Auth (10.2.0):
     - Firebase/CoreOnly
     - FirebaseAuth (~> 10.2.0)
@@ -34,10 +42,15 @@ PODS:
   - PromisesObjC (2.1.1)
 
 DEPENDENCIES:
+  - FBSDKLoginKit
   - Firebase/Auth
 
 SPEC REPOS:
   trunk:
+    - FBAEMKit
+    - FBSDKCoreKit
+    - FBSDKCoreKit_Basics
+    - FBSDKLoginKit
     - Firebase
     - FirebaseAuth
     - FirebaseCore
@@ -47,6 +60,10 @@ SPEC REPOS:
     - PromisesObjC
 
 SPEC CHECKSUMS:
+  FBAEMKit: c7f82b5145d446bcbbcd50485c032689032fc6a2
+  FBSDKCoreKit: 7542746fc63a2a38dd6a865eeb54268341f37b83
+  FBSDKCoreKit_Basics: 92d6b26c0bed30ab09bbdd96dccaa26e6c9978d1
+  FBSDKLoginKit: 4e275d30cf90e92bdf3a7c82857a8642abf23037
   Firebase: a3ea7eba4382afd83808376edb99acdaff078dcf
   FirebaseAuth: 08e7739244eeae5216d0a3f8d9f16a76be9c252e
   FirebaseCore: 813838072b797b64f529f3c2ee35e696e5641dd1
@@ -55,6 +72,6 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: c1edebe64e9fb4e8f6415d018edf1fd3eac074a1
   PromisesObjC: ab77feca74fa2823e7af4249b8326368e61014cb
 
-PODFILE CHECKSUM: db70704c32603dfd20e96be1574478e6731e3b4d
+PODFILE CHECKSUM: 2e5460edc5551888220c141801db677157c5222a
 
 COCOAPODS: 1.11.3
