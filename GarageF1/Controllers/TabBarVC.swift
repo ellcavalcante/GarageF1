@@ -26,6 +26,9 @@ class TabBarVC: UITabBarController {
         return navController
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = true
+    }
         
         func setupVCs() {
                 viewControllers = [

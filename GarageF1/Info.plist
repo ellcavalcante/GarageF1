@@ -22,25 +22,24 @@
     
     <key>CFBundleURLTypes</key>
     <array>
-        <dict>
-            <key>CFBundleURLSchemes</key>
-            <array>
-                <string>fbAPP-ID</string>
-            </array>
-        </dict>
+      <dict>
+      <key>CFBundleURLSchemes</key>
+      <array>
+        <string>fb660102519191261</string>
+      </array>
+      </dict>
     </array>
     <key>FacebookAppID</key>
-    <string>APP-ID</string>
+    <string>660102519191261</string>
     <key>FacebookClientToken</key>
-    <string>CLIENT-TOKEN</string>
+    <string>70d52186f45b46a758e324419610d3f4</string>
     <key>FacebookDisplayName</key>
-    <string>APP-NAME</string>
+    <string>GarageF1</string>
     
     <key>LSApplicationQueriesSchemes</key>
     <array>
-        <string>fbapi</string>
-        <string>fb-messenger-share-api</string>
+      <string>fbapi</string>
+      <string>fb-messenger-share-api</string>
     </array>
-    
 </dict>
 </plist>

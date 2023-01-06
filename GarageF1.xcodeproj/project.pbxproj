@@ -72,8 +72,10 @@
 		0B4CC6522953EF5300D29D4C /* Tela03.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tela03.swift; sourceTree = "<group>"; };
 		0B4CC6542953EF6200D29D4C /* Tela04.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tela04.swift; sourceTree = "<group>"; };
 		0B4CC6562953F10100D29D4C /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
+		0B9CF6822962692C002E3405 /* GarageF1.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GarageF1.entitlements; sourceTree = "<group>"; };
 		0BAD883729591FC800CCC859 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		0BAD8839295922E600CCC859 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		0BD59C982966633300788062 /* GarageF1Release.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GarageF1Release.entitlements; sourceTree = "<group>"; };
 		41F02849E9FEF0A860392A8B /* Pods-GarageF1Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GarageF1Tests.release.xcconfig"; path = "Target Support Files/Pods-GarageF1Tests/Pods-GarageF1Tests.release.xcconfig"; sourceTree = "<group>"; };
 		42DB2EDD8970C0DCE7889C00 /* Pods_GarageF1_GarageF1UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GarageF1_GarageF1UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		88589B93D518063277FE39F1 /* Pods_GarageF1Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GarageF1Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,16 +140,15 @@
 		0B4CC61F2953E90800D29D4C /* GarageF1 */ = {
 			isa = PBXGroup;
 			children = (
+				0BD59C982966633300788062 /* GarageF1Release.entitlements */,
+				0B9509D02963C4C500069D7D /* Alert */,
+				0B9509CF2963C4B100069D7D /* Controllers */,
 				0BAD883629591EF900CCC859 /* Views */,
 				0B4CC6202953E90800D29D4C /* AppDelegate.swift */,
 				0B4CC6222953E90800D29D4C /* SceneDelegate.swift */,
-				0B4CC6562953F10100D29D4C /* TabBarVC.swift */,
-				0BAD8839295922E600CCC859 /* LoginVC.swift */,
-				0B10DD4F295A5AB300CB397A /* EmailLoginVC.swift */,
-				0B10DD55295A87B500CB397A /* RegisterLoginVC.swift */,
-				0B10DD51295A630700CB397A /* Alert.swift */,
 				0B4CC6292953E90900D29D4C /* Assets.xcassets */,
 				0B4CC62B2953E90900D29D4C /* LaunchScreen.storyboard */,
+				0B9CF6822962692C002E3405 /* GarageF1.entitlements */,
 				0B10DD57295A931700CB397A /* GoogleService-Info.plist */,
 				0B4CC62E2953E90900D29D4C /* Info.plist */,
 			);
@@ -169,6 +170,25 @@
 				0B4CC6432953E90900D29D4C /* GarageF1UITestsLaunchTests.swift */,
 			);
 			path = GarageF1UITests;
+			sourceTree = "<group>";
+		};
+		0B9509CF2963C4B100069D7D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0B4CC6562953F10100D29D4C /* TabBarVC.swift */,
+				0BAD8839295922E600CCC859 /* LoginVC.swift */,
+				0B10DD4F295A5AB300CB397A /* EmailLoginVC.swift */,
+				0B10DD55295A87B500CB397A /* RegisterLoginVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0B9509D02963C4C500069D7D /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				0B10DD51295A630700CB397A /* Alert.swift */,
+			);
+			path = Alert;
 			sourceTree = "<group>";
 		};
 		0BAD883629591EF900CCC859 /* Views */ = {
@@ -628,9 +648,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GarageF1/GarageF1.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 8HA5H8Z9XW;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GarageF1/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -657,9 +678,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GarageF1/GarageF1Release.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 8HA5H8Z9XW;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GarageF1/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
