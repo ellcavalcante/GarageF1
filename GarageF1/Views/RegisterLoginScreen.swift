@@ -19,7 +19,7 @@ class RegisterLoginScreen: UIView {
         self.delegate = delegate
     }
     
-    lazy var backButton: UIButton = {
+   private lazy var backButton: UIButton = {
         let bButton = UIButton()
         bButton.translatesAutoresizingMaskIntoConstraints = false
         bButton.setImage(UIImage(named: "back1"), for: .normal)
@@ -27,7 +27,7 @@ class RegisterLoginScreen: UIView {
         return bButton
     }()
     
-    lazy var imageRegister: UIImageView = {
+    private lazy var imageRegister: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
         image.image = UIImage(named: "logo")
@@ -35,7 +35,7 @@ class RegisterLoginScreen: UIView {
         return image
     }()
     
-    lazy var emailTextField: UITextField = {
+    private lazy var emailTextField: UITextField = {
         let email = UITextField()
         email.translatesAutoresizingMaskIntoConstraints = false
         email.autocorrectionType = .no
@@ -48,7 +48,7 @@ class RegisterLoginScreen: UIView {
         return email
     }()
     
-    lazy var passwordTextField: UITextField = {
+    private lazy var passwordTextField: UITextField = {
         let password = UITextField()
         password.translatesAutoresizingMaskIntoConstraints = false
         password.autocorrectionType = .no
@@ -62,7 +62,7 @@ class RegisterLoginScreen: UIView {
         return password
     }()
     
-    lazy var registerButton: UIButton = {
+    private lazy var registerButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Registrar", for: .normal)
@@ -103,7 +103,7 @@ class RegisterLoginScreen: UIView {
         delegate?.actionBackButton()
     }
     
-    public func validaTextFields() {
+    func validaTextFields() {
         let email: String = emailTextField.text ?? ""
         let password: String = passwordTextField.text ?? ""
         
@@ -124,15 +124,15 @@ class RegisterLoginScreen: UIView {
         }
     }
     
-    public func getEmail()-> String{
+    func getEmail()-> String{
         return emailTextField.text ?? ""
     }
     
-    public func getPassword()-> String{
+    func getPassword()-> String{
         return passwordTextField.text ?? ""
     }
     
-    public func configTextFieldDelegate(delegate: UITextFieldDelegate) {
+    func configTextFieldDelegate(delegate: UITextFieldDelegate) {
         emailTextField.delegate = delegate
         passwordTextField.delegate = delegate
     }
@@ -144,28 +144,28 @@ class RegisterLoginScreen: UIView {
     private func setUpConstraints(){
         NSLayoutConstraint.activate([
             
-            self.imageRegister.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 60),
-            self.imageRegister.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 60),
-            self.imageRegister.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -60),
-            self.imageRegister.heightAnchor.constraint(equalToConstant: 200),
+            imageRegister.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 60),
+            imageRegister.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 60),
+            imageRegister.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -60),
+            imageRegister.heightAnchor.constraint(equalToConstant: 200),
             
-            self.backButton.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
-            self.backButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
+            backButton.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            backButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             
-            self.emailTextField.topAnchor.constraint(equalTo: imageRegister.bottomAnchor, constant: 20),
-            self.emailTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
-            self.emailTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
-            self.emailTextField.heightAnchor.constraint(equalToConstant: 45),
+            emailTextField.topAnchor.constraint(equalTo: imageRegister.bottomAnchor, constant: 20),
+            emailTextField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            emailTextField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            emailTextField.heightAnchor.constraint(equalToConstant: 45),
             
-            self.passwordTextField.topAnchor.constraint(equalTo: self.emailTextField.bottomAnchor, constant: 15),
-            self.passwordTextField.leadingAnchor.constraint(equalTo: self.emailTextField.leadingAnchor),
-            self.passwordTextField.trailingAnchor.constraint(equalTo: self.emailTextField.trailingAnchor),
-            self.passwordTextField.heightAnchor.constraint(equalTo: self.emailTextField.heightAnchor),
+            passwordTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: 15),
+            passwordTextField.leadingAnchor.constraint(equalTo: emailTextField.leadingAnchor),
+            passwordTextField.trailingAnchor.constraint(equalTo: emailTextField.trailingAnchor),
+            passwordTextField.heightAnchor.constraint(equalTo: emailTextField.heightAnchor),
             
-            self.registerButton.topAnchor.constraint(equalTo: self.passwordTextField.bottomAnchor, constant: 15),
-            self.registerButton.leadingAnchor.constraint(equalTo: self.passwordTextField.leadingAnchor),
-            self.registerButton.trailingAnchor.constraint(equalTo: self.passwordTextField.trailingAnchor),
-            self.registerButton.heightAnchor.constraint(equalTo: self.passwordTextField.heightAnchor)
+            registerButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 15),
+            registerButton.leadingAnchor.constraint(equalTo: passwordTextField.leadingAnchor),
+            registerButton.trailingAnchor.constraint(equalTo: passwordTextField.trailingAnchor),
+            registerButton.heightAnchor.constraint(equalTo: passwordTextField.heightAnchor)
         ])
     }
 }

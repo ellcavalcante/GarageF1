@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+
+struct HomeRacer {
+    var indice: String
+    var nameTeams: String
+    var name: String
+    var nameImage: String
+}

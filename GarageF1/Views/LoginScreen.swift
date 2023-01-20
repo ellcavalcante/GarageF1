@@ -24,7 +24,7 @@ class LoginScreen: UIView {
     }
     
     
-    lazy var logoImage: UIImageView = {
+    private lazy var logoImage: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
         image.image = UIImage(named: "logo")
@@ -32,32 +32,32 @@ class LoginScreen: UIView {
         return image
     }()
     
-    lazy var appleButton: ASAuthorizationAppleIDButton = {
+    private lazy var appleButton: ASAuthorizationAppleIDButton = {
         let button = ASAuthorizationAppleIDButton()
         button.translatesAutoresizingMaskIntoConstraints = false
 //        button.setTitle("Continuar com Apple", for: .normal)
 //       button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 22)
 //        button.setTitleColor(.black, for: .normal)
-        button.clipsToBounds = true
-//        button.setImage(UIImage(named: "appleicon"), for: .normal)
-        button.layer.cornerRadius = 7.5
-        button.backgroundColor = UIColor(red: 247/255, green: 248/255, blue: 252/255, alpha: 1.0)
+//        button.clipsToBounds = true
+////        button.setImage(UIImage(named: "appleicon"), for: .normal)
+//        button.layer.cornerRadius = 7.5
+//        button.backgroundColor = UIColor(red: 247/255, green: 248/255, blue: 252/255, alpha: 1.0)
         button.addTarget(self, action: #selector(tappedAppleButton), for: .touchUpInside)
         return button
     }()
     
-    lazy var facebookButton: FBLoginButton = {
+    private lazy var facebookButton: FBLoginButton = {
         let button = FBLoginButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 22)
         button.clipsToBounds = true
         button.layer.cornerRadius = 7.5
         button.addTarget(self, action: #selector(tappedFacebookButton), for: .touchUpInside)
-        button.permissions = ["public_profile", "email"]
+//        button.permissions = ["public_profile", "email"]
         return button
     }()
     
-    lazy var emailButton: UIButton = {
+    private lazy var emailButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Continuar com E-mail", for: .normal)
@@ -107,25 +107,25 @@ class LoginScreen: UIView {
     
     func setUpConstraints() {
         NSLayoutConstraint.activate([
-            self.logoImage.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 60),
-            self.logoImage.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 60),
-            self.logoImage.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -60),
-            self.logoImage.heightAnchor.constraint(equalToConstant: 200),
+            logoImage.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 60),
+            logoImage.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 60),
+            logoImage.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -60),
+            logoImage.heightAnchor.constraint(equalToConstant: 200),
             
-            self.appleButton.topAnchor.constraint(equalTo: self.logoImage.bottomAnchor, constant: 60),
-            self.appleButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
-            self.appleButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
-            self.appleButton.heightAnchor.constraint(equalToConstant: 45),
+            appleButton.topAnchor.constraint(equalTo: logoImage.bottomAnchor, constant: 60),
+            appleButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            appleButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            appleButton.heightAnchor.constraint(equalToConstant: 45),
             
-            self.facebookButton.topAnchor.constraint(equalTo: self.appleButton.bottomAnchor, constant: 15),
-            self.facebookButton.leadingAnchor.constraint(equalTo: self.appleButton.leadingAnchor),
-            self.facebookButton.trailingAnchor.constraint(equalTo: self.appleButton.trailingAnchor),
-            self.facebookButton.heightAnchor.constraint(equalTo: self.appleButton.heightAnchor),
+            facebookButton.topAnchor.constraint(equalTo: appleButton.bottomAnchor, constant: 15),
+            facebookButton.leadingAnchor.constraint(equalTo: appleButton.leadingAnchor),
+            facebookButton.trailingAnchor.constraint(equalTo: appleButton.trailingAnchor),
+            facebookButton.heightAnchor.constraint(equalTo: appleButton.heightAnchor),
             
-            self.emailButton.topAnchor.constraint(equalTo: self.facebookButton.bottomAnchor, constant: 15),
-            self.emailButton.leadingAnchor.constraint(equalTo: self.facebookButton.leadingAnchor),
-            self.emailButton.trailingAnchor.constraint(equalTo: self.facebookButton.trailingAnchor),
-            self.emailButton.heightAnchor.constraint(equalTo: self.facebookButton.heightAnchor),
+            emailButton.topAnchor.constraint(equalTo: facebookButton.bottomAnchor, constant: 15),
+            emailButton.leadingAnchor.constraint(equalTo: facebookButton.leadingAnchor),
+            emailButton.trailingAnchor.constraint(equalTo: facebookButton.trailingAnchor),
+            emailButton.heightAnchor.constraint(equalTo: facebookButton.heightAnchor),
             
         ])
     }

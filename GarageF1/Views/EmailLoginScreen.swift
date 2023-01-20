@@ -20,7 +20,7 @@ class EmailLoginScreen: UIView {
         self.delegate = delegate
     }
     
-    lazy var backButton: UIButton = {
+    private lazy var backButton: UIButton = {
         let bButton = UIButton()
         bButton.translatesAutoresizingMaskIntoConstraints = false
         bButton.setImage(UIImage(named: "back1"), for: .normal)
@@ -28,7 +28,7 @@ class EmailLoginScreen: UIView {
         return bButton
     }()
 
-    lazy var imageRegister: UIImageView = {
+    private lazy var imageRegister: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
         image.image = UIImage(named: "logo")
@@ -36,7 +36,7 @@ class EmailLoginScreen: UIView {
         return image
     }()
     
-    lazy var emailTextField: UITextField = {
+    private lazy var emailTextField: UITextField = {
         let email = UITextField()
         email.translatesAutoresizingMaskIntoConstraints = false
         email.autocorrectionType = .no
@@ -49,7 +49,7 @@ class EmailLoginScreen: UIView {
         return email
     }()
     
-    lazy var passwordTextField: UITextField = {
+    private lazy var passwordTextField: UITextField = {
         let password = UITextField()
         password.translatesAutoresizingMaskIntoConstraints = false
         password.autocorrectionType = .no
@@ -63,7 +63,7 @@ class EmailLoginScreen: UIView {
         return password
     }()
     
-    lazy var esqueceuSenhaButton: UIButton = {
+    private lazy var esqueceuSenhaButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Esqueceu sua senha?", for: .normal)
@@ -72,7 +72,7 @@ class EmailLoginScreen: UIView {
         return button
     }()
     
-    lazy var signInButton: UIButton = {
+    private lazy var signInButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Entrar", for: .normal)
@@ -85,7 +85,7 @@ class EmailLoginScreen: UIView {
         return button
     }()
     
-    lazy var registerButton: UIButton = {
+    private lazy var registerButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Cadastrar-se", for: .normal)
@@ -133,7 +133,7 @@ class EmailLoginScreen: UIView {
         delegate?.actionBackButton()
     }
     
-    public func validaTextFields() {
+    func validaTextFields() {
         let email: String = emailTextField.text ?? ""
         let password: String = passwordTextField.text ?? ""
         
@@ -154,15 +154,15 @@ class EmailLoginScreen: UIView {
         }
     }
     
-    public func getEmail()-> String{
+    func getEmail()-> String{
         return emailTextField.text ?? ""
     }
     
-    public func getPassword()-> String{
+    func getPassword()-> String{
         return passwordTextField.text ?? ""
     }
     
-    public func configTextFieldDelegate(delegate: UITextFieldDelegate) {
+    func configTextFieldDelegate(delegate: UITextFieldDelegate) {
         emailTextField.delegate = delegate
         passwordTextField.delegate = delegate
     }
@@ -174,40 +174,40 @@ class EmailLoginScreen: UIView {
     private func setUpConstraints(){
         NSLayoutConstraint.activate([
             
-            self.imageRegister.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 60),
-            self.imageRegister.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 60),
-            self.imageRegister.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -60),
-            self.imageRegister.heightAnchor.constraint(equalToConstant: 200),
+            imageRegister.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 60),
+            imageRegister.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 60),
+            imageRegister.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -60),
+            imageRegister.heightAnchor.constraint(equalToConstant: 200),
             
 
-            self.backButton.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
-            self.backButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
+            backButton.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            backButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
 
-            self.emailTextField.topAnchor.constraint(equalTo: imageRegister.bottomAnchor, constant: 20),
-            self.emailTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
-            self.emailTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
-            self.emailTextField.heightAnchor.constraint(equalToConstant: 45),
+            emailTextField.topAnchor.constraint(equalTo: imageRegister.bottomAnchor, constant: 20),
+            emailTextField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            emailTextField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            emailTextField.heightAnchor.constraint(equalToConstant: 45),
 
-            self.passwordTextField.topAnchor.constraint(equalTo: self.emailTextField.bottomAnchor, constant: 15),
-            self.passwordTextField.leadingAnchor.constraint(equalTo: self.emailTextField.leadingAnchor),
-            self.passwordTextField.trailingAnchor.constraint(equalTo: self.emailTextField.trailingAnchor),
-            self.passwordTextField.heightAnchor.constraint(equalTo: self.emailTextField.heightAnchor),
+            passwordTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: 15),
+            passwordTextField.leadingAnchor.constraint(equalTo: emailTextField.leadingAnchor),
+            passwordTextField.trailingAnchor.constraint(equalTo: emailTextField.trailingAnchor),
+            passwordTextField.heightAnchor.constraint(equalTo: emailTextField.heightAnchor),
             
-            self.esqueceuSenhaButton.topAnchor.constraint(equalTo: self.passwordTextField.bottomAnchor, constant: 3),
-            self.esqueceuSenhaButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 230),
-            self.esqueceuSenhaButton.trailingAnchor.constraint(equalTo: self.passwordTextField.trailingAnchor),
-            self.signInButton.heightAnchor.constraint(equalTo: self.passwordTextField.heightAnchor),
+            esqueceuSenhaButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 3),
+            esqueceuSenhaButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 230),
+            esqueceuSenhaButton.trailingAnchor.constraint(equalTo: passwordTextField.trailingAnchor),
+            signInButton.heightAnchor.constraint(equalTo: passwordTextField.heightAnchor),
             
 
-            self.signInButton.topAnchor.constraint(equalTo: self.esqueceuSenhaButton.bottomAnchor, constant: 20),
-            self.signInButton.leadingAnchor.constraint(equalTo: self.passwordTextField.leadingAnchor),
-            self.signInButton.trailingAnchor.constraint(equalTo: self.passwordTextField.trailingAnchor),
-            self.signInButton.heightAnchor.constraint(equalTo: self.passwordTextField.heightAnchor),
+            signInButton.topAnchor.constraint(equalTo: esqueceuSenhaButton.bottomAnchor, constant: 20),
+            signInButton.leadingAnchor.constraint(equalTo: passwordTextField.leadingAnchor),
+            signInButton.trailingAnchor.constraint(equalTo: passwordTextField.trailingAnchor),
+            signInButton.heightAnchor.constraint(equalTo: passwordTextField.heightAnchor),
             
-            self.registerButton.topAnchor.constraint(equalTo: self.signInButton.bottomAnchor, constant: 15),
-            self.registerButton.leadingAnchor.constraint(equalTo: self.signInButton.leadingAnchor),
-            self.registerButton.trailingAnchor.constraint(equalTo: self.signInButton.trailingAnchor),
-            self.registerButton.heightAnchor.constraint(equalTo: self.signInButton.heightAnchor)
+            registerButton.topAnchor.constraint(equalTo: signInButton.bottomAnchor, constant: 15),
+            registerButton.leadingAnchor.constraint(equalTo: signInButton.leadingAnchor),
+            registerButton.trailingAnchor.constraint(equalTo: signInButton.trailingAnchor),
+            registerButton.heightAnchor.constraint(equalTo: signInButton.heightAnchor)
         ])
     }
 }

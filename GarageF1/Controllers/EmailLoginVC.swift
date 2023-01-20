@@ -31,8 +31,6 @@ class EmailLoginVC: UIViewController {
     }
 }
 
-
-
 extension EmailLoginVC: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
@@ -70,10 +68,10 @@ extension EmailLoginVC: emailLoginScreenProtocol {
     
     func actionRegisterButton() {
         let registerLoginVC: RegisterLoginVC = RegisterLoginVC()
-        self.navigationController?.pushViewController(registerLoginVC, animated: true)
+        navigationController?.pushViewController(registerLoginVC, animated: true)
     }
     
     func actionBackButton() {
-        self.navigationController?.popToRootViewController(animated: true)
+        navigationController?.popToRootViewController(animated: true)
     }
 }

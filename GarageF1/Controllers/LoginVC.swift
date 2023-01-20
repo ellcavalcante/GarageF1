@@ -7,6 +7,7 @@
 
 import UIKit
 import FBSDKLoginKit
+import FBSDKCoreKit
 import FirebaseCore
 import FirebaseAuth
 import AuthenticationServices
@@ -34,49 +35,18 @@ class LoginVC: UIViewController {
         }
     }
 
-
-extension LoginVC: loginScreenProtocol, LoginButtonDelegate {
-    
-    func loginButtonDidLogOut(_ loginButton: FBSDKLoginKit.FBLoginButton) {
-        //sem codigo até agora
-    }
-    
-    
-    func loginButton(_ loginButton: FBSDKLoginKit.FBLoginButton, didCompleteWith result: FBSDKLoginKit.LoginManagerLoginResult?, error: Error?) {
-        
-        guard let token = result?.token?.tokenString else {
-            print("User failed to log in with facebook")
-            return
-        }
-        
-        let credential = FacebookAuthProvider.credential(withAccessToken: token)
-        
-        FirebaseAuth.Auth.auth().signIn(with: credential, completion: { authResult, error in
-
-            guard authResult != nil, error == nil else {
-                if let error = error {
-                    print("Facebook credential login failed MFA may be needed - \(error)")
-                }
-                return
-            }
-            print("Successfully logged user in")
-        })
-    }
-
-    
+extension LoginVC: loginScreenProtocol {
     
     func actionAppleLoginButton() {
-        
-
-        
         
     }
     
     func actionLoginFacebookButton() {
-            
         
-
     }
+    
+    
+    
     
     func actionLoginEmailButton() {
         let emailLoginVC: EmailLoginVC = EmailLoginVC()
@@ -84,6 +54,9 @@ extension LoginVC: loginScreenProtocol, LoginButtonDelegate {
     }
 }
 
+func loginButtonDidLogOut(_ loginButton: FBSDKLoginKit.FBLoginButton) {
+    print("LogOut")
+}
 
 
 

@@ -10,6 +10,7 @@ target 'GarageF1' do
 pod 'Firebase/Auth'
 pod 'FBSDKLoginKit'
 
+
   target 'GarageF1Tests' do
     inherit! :search_paths
     # Pods for testing

@@ -22,7 +22,6 @@ class TabBarVC: UITabBarController {
         navController.tabBarItem.title = title
         navController.tabBarItem.image = image
         navController.navigationBar.prefersLargeTitles = true
-        rootViewController.navigationItem.title = title
         return navController
     }
     
@@ -32,7 +31,7 @@ class TabBarVC: UITabBarController {
         
         func setupVCs() {
                 viewControllers = [
-                    createNavController(for: Tela01(), title: "Home", image: UIImage(systemName: "house") ?? UIImage()),
+                    createNavController(for: HomeVC(), title: "Home", image: UIImage(systemName: "house") ?? UIImage()),
                     createNavController(for: Tela02(), title: "Racing", image: UIImage(systemName: "flag.checkered.2.crossed") ?? UIImage()),
                     createNavController(for: Tela03(), title: "Drivers", image: UIImage(systemName: "crown") ?? UIImage()),
                     createNavController(for: Tela04(), title: "History", image: UIImage(systemName: "doc.text.magnifyingglass") ?? UIImage())

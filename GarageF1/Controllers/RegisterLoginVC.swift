@@ -46,7 +46,7 @@ extension RegisterLoginVC: UITextFieldDelegate {
 extension RegisterLoginVC: registerScreenProtocol {
     func actionBackButton() {
         
-        self.navigationController?.popViewController(animated: true)
+        navigationController?.popViewController(animated: true)
     }
     
     func actionRegisterButton() {
