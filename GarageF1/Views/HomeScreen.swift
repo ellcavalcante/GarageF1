@@ -9,13 +9,15 @@ import UIKit
 
 class HomeScreen: UIView {
     
+    
+    
     private lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.showsVerticalScrollIndicator = true
         scrollView.isDirectionalLockEnabled = true
         scrollView.showsHorizontalScrollIndicator = false
-        //        scrollView.backgroundColor = .systemBlue
+//        scrollView.backgroundColor = .systemBlue
         let contentViewHeightConstraint = scrollView.heightAnchor.constraint(equalTo: self.heightAnchor)
         contentViewHeightConstraint.priority = .defaultLow
         return scrollView
@@ -172,14 +174,14 @@ class HomeScreen: UIView {
             scrollView.topAnchor.constraint(equalTo: topAnchor),
             scrollView.leadingAnchor.constraint(equalTo: leadingAnchor),
             scrollView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            scrollView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: bottomAnchor),
             
             contentView.topAnchor.constraint(equalTo: scrollView.topAnchor),
             contentView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
             contentView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
             contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
             
-            bemVindoLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 70),
+            bemVindoLabel.topAnchor.constraint(equalTo: topAnchor, constant: 70),
             bemVindoLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             bemVindoLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -230),
             bemVindoLabel.heightAnchor.constraint(equalToConstant: 20),

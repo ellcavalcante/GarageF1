@@ -20,6 +20,7 @@ class HomeVC: UIViewController {
     var dataHomeDuel: [HomeDuel] = [HomeDuel(namePilot: "Ayrton Senna", imagePilot: "ayrton"),
                                     HomeDuel(namePilot: "Lewis Hamilton", imagePilot: "lewis")]
     
+    
     override func loadView() {
         view = homeScreen
     }
@@ -43,7 +44,7 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.dataHomeResults.count
+        return dataHomeResults.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

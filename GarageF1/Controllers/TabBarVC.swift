@@ -33,7 +33,7 @@ class TabBarVC: UITabBarController {
                 viewControllers = [
                     createNavController(for: HomeVC(), title: "Home", image: UIImage(systemName: "house") ?? UIImage()),
                     createNavController(for: Tela02(), title: "Racing", image: UIImage(systemName: "flag.checkered.2.crossed") ?? UIImage()),
-                    createNavController(for: Tela03(), title: "Drivers", image: UIImage(systemName: "crown") ?? UIImage()),
+                    createNavController(for: DriversVC(), title: "Drivers", image: UIImage(systemName: "crown") ?? UIImage()),
                     createNavController(for: Tela04(), title: "History", image: UIImage(systemName: "doc.text.magnifyingglass") ?? UIImage())
                 ]
         }
