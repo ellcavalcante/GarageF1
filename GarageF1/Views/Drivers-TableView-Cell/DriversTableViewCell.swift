@@ -44,6 +44,7 @@ class DriversTableViewCell: UITableViewCell {
     
     private func configConstraints(){
         NSLayoutConstraint.activate([
+            
             customDrivers.leadingAnchor.constraint(equalTo: leadingAnchor),
             customDrivers.trailingAnchor.constraint(equalTo: trailingAnchor),
             customDrivers.topAnchor.constraint(equalTo: topAnchor),

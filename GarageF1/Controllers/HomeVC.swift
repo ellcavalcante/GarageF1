@@ -29,6 +29,7 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
         self.homeScreen.configTableViewDelegate(delegate: self, dataSource: self)
         self.homeScreen.configProtocolsDestaqueCollectionView(delegate: self, dataSource: self)
+        homeScreen.delegate(delegate: self)
 //        self.homeScreen.configProtocolsDueloCollectionView(delegate: self, dataSource: self)
         
     }
@@ -37,6 +38,15 @@ class HomeVC: UIViewController {
         navigationController?.isNavigationBarHidden = true
     }
     
+}
+
+
+extension HomeVC: homeScreenProtocol {
+   
+    func actionSimulationButton() {
+        let simulationDuelVC: SimulationDuelVC = SimulationDuelVC()
+        navigationController?.pushViewController(simulationDuelVC, animated: true)
+    }
 }
 
 extension HomeVC: UITableViewDelegate, UITableViewDataSource {
@@ -80,7 +90,7 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
-            return CGSize(width: 300, height: 160)
+            return CGSize(width: 290, height: 190)
             
     }
 }

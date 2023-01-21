@@ -50,7 +50,7 @@ class DriversScreen: UIView {
         self.addSubview(self.topLabel)
         self.addSubview(self.bottomLabel)
         self.addSubview(self.driversLabel)
-        self.configConstraintsTableView()
+        self.configConstraints()
     }
     
     required init?(coder: NSCoder) {
@@ -64,7 +64,7 @@ class DriversScreen: UIView {
         
     }
 
-    private func configConstraintsTableView(){
+    private func configConstraints(){
         NSLayoutConstraint.activate([
             
             topLabel.leadingAnchor.constraint(equalTo: leadingAnchor),

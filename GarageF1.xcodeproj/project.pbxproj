@@ -22,9 +22,7 @@
 		0B4CC6382953E90900D29D4C /* GarageF1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4CC6372953E90900D29D4C /* GarageF1Tests.swift */; };
 		0B4CC6422953E90900D29D4C /* GarageF1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4CC6412953E90900D29D4C /* GarageF1UITests.swift */; };
 		0B4CC6442953E90900D29D4C /* GarageF1UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4CC6432953E90900D29D4C /* GarageF1UITestsLaunchTests.swift */; };
-		0B4CC6512953EF4400D29D4C /* Tela02.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4CC6502953EF4400D29D4C /* Tela02.swift */; };
 		0B4CC6532953EF5300D29D4C /* DriversScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4CC6522953EF5300D29D4C /* DriversScreen.swift */; };
-		0B4CC6552953EF6200D29D4C /* Tela04.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4CC6542953EF6200D29D4C /* Tela04.swift */; };
 		0B4CC6572953F10100D29D4C /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4CC6562953F10100D29D4C /* TabBarVC.swift */; };
 		0BA8BC2E29744CEC003B2D9C /* HomeRacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA8BC2D29744CEC003B2D9C /* HomeRacer.swift */; };
 		0BA8BC3129747CF6003B2D9C /* ResultsTableViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA8BC3029747CF6003B2D9C /* ResultsTableViewScreen.swift */; };
@@ -39,6 +37,12 @@
 		0BB50D272978B388009CD502 /* DueloCollectionViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB50D262978B388009CD502 /* DueloCollectionViewScreen.swift */; };
 		0BB50D292978B3B8009CD502 /* DueloCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB50D282978B3B8009CD502 /* DueloCollectionViewCell.swift */; };
 		0BB50D2B2978C8ED009CD502 /* HomeDuel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB50D2A2978C8ED009CD502 /* HomeDuel.swift */; };
+		0BBE027E297C7B5800D19D12 /* SimulationDuelScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBE027D297C7B5800D19D12 /* SimulationDuelScreen.swift */; };
+		0BBE0280297C7B6C00D19D12 /* SimulationDuelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBE027F297C7B6C00D19D12 /* SimulationDuelVC.swift */; };
+		0BBE0282297CA7BB00D19D12 /* HistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBE0281297CA7BB00D19D12 /* HistoryVC.swift */; };
+		0BBE0284297CA7D700D19D12 /* HistoryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBE0283297CA7D700D19D12 /* HistoryScreen.swift */; };
+		0BBE0286297CAB1700D19D12 /* RacingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBE0285297CAB1700D19D12 /* RacingScreen.swift */; };
+		0BBE0288297CAB4400D19D12 /* RacingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBE0287297CAB4400D19D12 /* RacingVC.swift */; };
 		0BCE0FDD296A03F900902EF5 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCE0FDC296A03F900902EF5 /* HomeVC.swift */; };
 		0BF8A825296CE2AF0058D545 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF8A824296CE2AF0058D545 /* HomeScreen.swift */; };
 		27260257834CDAC8ADA3A004 /* Pods_GarageF1Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88589B93D518063277FE39F1 /* Pods_GarageF1Tests.framework */; };
@@ -83,9 +87,7 @@
 		0B4CC63D2953E90900D29D4C /* GarageF1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GarageF1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B4CC6412953E90900D29D4C /* GarageF1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarageF1UITests.swift; sourceTree = "<group>"; };
 		0B4CC6432953E90900D29D4C /* GarageF1UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarageF1UITestsLaunchTests.swift; sourceTree = "<group>"; };
-		0B4CC6502953EF4400D29D4C /* Tela02.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tela02.swift; sourceTree = "<group>"; };
 		0B4CC6522953EF5300D29D4C /* DriversScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriversScreen.swift; sourceTree = "<group>"; };
-		0B4CC6542953EF6200D29D4C /* Tela04.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tela04.swift; sourceTree = "<group>"; };
 		0B4CC6562953F10100D29D4C /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		0B9CF6822962692C002E3405 /* GarageF1.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GarageF1.entitlements; sourceTree = "<group>"; };
 		0BA8BC2D29744CEC003B2D9C /* HomeRacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRacer.swift; sourceTree = "<group>"; };
@@ -101,6 +103,12 @@
 		0BB50D262978B388009CD502 /* DueloCollectionViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DueloCollectionViewScreen.swift; sourceTree = "<group>"; };
 		0BB50D282978B3B8009CD502 /* DueloCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DueloCollectionViewCell.swift; sourceTree = "<group>"; };
 		0BB50D2A2978C8ED009CD502 /* HomeDuel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDuel.swift; sourceTree = "<group>"; };
+		0BBE027D297C7B5800D19D12 /* SimulationDuelScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationDuelScreen.swift; sourceTree = "<group>"; };
+		0BBE027F297C7B6C00D19D12 /* SimulationDuelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationDuelVC.swift; sourceTree = "<group>"; };
+		0BBE0281297CA7BB00D19D12 /* HistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryVC.swift; sourceTree = "<group>"; };
+		0BBE0283297CA7D700D19D12 /* HistoryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryScreen.swift; sourceTree = "<group>"; };
+		0BBE0285297CAB1700D19D12 /* RacingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RacingScreen.swift; sourceTree = "<group>"; };
+		0BBE0287297CAB4400D19D12 /* RacingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RacingVC.swift; sourceTree = "<group>"; };
 		0BCE0FDC296A03F900902EF5 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		0BD59C982966633300788062 /* GarageF1Release.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GarageF1Release.entitlements; sourceTree = "<group>"; };
 		0BF8A824296CE2AF0058D545 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
@@ -219,6 +227,9 @@
 				0B10DD55295A87B500CB397A /* RegisterLoginVC.swift */,
 				0BCE0FDC296A03F900902EF5 /* HomeVC.swift */,
 				0BB40041297B5CF5004BB3F5 /* DriversVC.swift */,
+				0BBE027F297C7B6C00D19D12 /* SimulationDuelVC.swift */,
+				0BBE0281297CA7BB00D19D12 /* HistoryVC.swift */,
+				0BBE0287297CAB4400D19D12 /* RacingVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -256,13 +267,14 @@
 			children = (
 				0BB40044297B616D004BB3F5 /* Drivers-TableView-Cell */,
 				0BB40043297B6145004BB3F5 /* Home-Collection-TableView-Cell */,
-				0B4CC6542953EF6200D29D4C /* Tela04.swift */,
+				0BBE0283297CA7D700D19D12 /* HistoryScreen.swift */,
 				0B4CC6522953EF5300D29D4C /* DriversScreen.swift */,
-				0B4CC6502953EF4400D29D4C /* Tela02.swift */,
+				0BBE0285297CAB1700D19D12 /* RacingScreen.swift */,
 				0BF8A824296CE2AF0058D545 /* HomeScreen.swift */,
 				0BAD883729591FC800CCC859 /* LoginScreen.swift */,
 				0B10DD4D295A5A8E00CB397A /* EmailLoginScreen.swift */,
 				0B10DD53295A878000CB397A /* RegisterLoginScreen.swift */,
+				0BBE027D297C7B5800D19D12 /* SimulationDuelScreen.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -557,17 +569,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BBE0284297CA7D700D19D12 /* HistoryScreen.swift in Sources */,
+				0BBE0286297CAB1700D19D12 /* RacingScreen.swift in Sources */,
 				0B10DD54295A878000CB397A /* RegisterLoginScreen.swift in Sources */,
+				0BBE0282297CA7BB00D19D12 /* HistoryVC.swift in Sources */,
 				0B4CC6212953E90800D29D4C /* AppDelegate.swift in Sources */,
 				0BA8BC2E29744CEC003B2D9C /* HomeRacer.swift in Sources */,
+				0BBE0280297C7B6C00D19D12 /* SimulationDuelVC.swift in Sources */,
 				0B4CC6232953E90800D29D4C /* SceneDelegate.swift in Sources */,
-				0B4CC6512953EF4400D29D4C /* Tela02.swift in Sources */,
 				0BA8BC3129747CF6003B2D9C /* ResultsTableViewScreen.swift in Sources */,
 				0BB40042297B5CF5004BB3F5 /* DriversVC.swift in Sources */,
 				0B10DD50295A5AB300CB397A /* EmailLoginVC.swift in Sources */,
 				0BF8A825296CE2AF0058D545 /* HomeScreen.swift in Sources */,
 				0BA8BC35297483CD003B2D9C /* HomeResults.swift in Sources */,
 				0B23C44F297396F70080D242 /* DestaquesCollectionViewCell.swift in Sources */,
+				0BBE0288297CAB4400D19D12 /* RacingVC.swift in Sources */,
 				0BB4004A297B63A7004BB3F5 /* Drivers.swift in Sources */,
 				0BA8BC3329747D2E003B2D9C /* ResultsTableViewCell.swift in Sources */,
 				0BCE0FDD296A03F900902EF5 /* HomeVC.swift in Sources */,
@@ -581,9 +597,9 @@
 				0B23C451297397760080D242 /* DestaquesCollectionViewCellScreen.swift in Sources */,
 				0BB40048297B62BE004BB3F5 /* CustomDriversTableViewScreen.swift in Sources */,
 				0BB40046297B61AB004BB3F5 /* DriversTableViewCell.swift in Sources */,
+				0BBE027E297C7B5800D19D12 /* SimulationDuelScreen.swift in Sources */,
 				0BAD883829591FC800CCC859 /* LoginScreen.swift in Sources */,
 				0B4CC6532953EF5300D29D4C /* DriversScreen.swift in Sources */,
-				0B4CC6552953EF6200D29D4C /* Tela04.swift in Sources */,
 				0B10DD56295A87B500CB397A /* RegisterLoginVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

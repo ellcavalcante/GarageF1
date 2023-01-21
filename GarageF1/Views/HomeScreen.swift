@@ -7,29 +7,45 @@
 
 import UIKit
 
+protocol homeScreenProtocol: AnyObject {
+    func actionSimulationButton()
+}
+
+
 class HomeScreen: UIView {
     
+    private weak var delegate: homeScreenProtocol?
+    func delegate(delegate: homeScreenProtocol?) {
+        self.delegate = delegate
+    }
     
     
-    private lazy var scrollView: UIScrollView = {
-        let scrollView = UIScrollView()
-        scrollView.translatesAutoresizingMaskIntoConstraints = false
-        scrollView.showsVerticalScrollIndicator = true
-        scrollView.isDirectionalLockEnabled = true
-        scrollView.showsHorizontalScrollIndicator = false
-//        scrollView.backgroundColor = .systemBlue
-        let contentViewHeightConstraint = scrollView.heightAnchor.constraint(equalTo: self.heightAnchor)
-        contentViewHeightConstraint.priority = .defaultLow
-        return scrollView
-    }()
     
-    private lazy var contentView: UIView = {
-        let contentView = UIView()
-        contentView.translatesAutoresizingMaskIntoConstraints = false
-        return contentView
-    }()
+//    private lazy var scrollView: UIScrollView = {
+//        let scrollView = UIScrollView()
+//        scrollView.translatesAutoresizingMaskIntoConstraints = false
+//        scrollView.showsVerticalScrollIndicator = true
+//        scrollView.isDirectionalLockEnabled = true
+//        scrollView.showsHorizontalScrollIndicator = false
+////        scrollView.backgroundColor = .systemBlue
+//        let contentViewHeightConstraint = scrollView.heightAnchor.constraint(equalTo: self.heightAnchor)
+//        contentViewHeightConstraint.priority = .defaultLow
+//        return scrollView
+//    }()
+//
+//    private lazy var contentView: UIView = {
+//        let contentView = UIView()
+//        contentView.translatesAutoresizingMaskIntoConstraints = false
+//        return contentView
+//    }()
     
-    
+//    private lazy var stackView: UIStackView = {
+//       let stackView = UIStackView()
+//        stackView.translatesAutoresizingMaskIntoConstraints = false
+//        stackView.axis = .vertical
+//        return stackView
+//    }()
+//    
     private lazy var bemVindoLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -72,8 +88,19 @@ class HomeScreen: UIView {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout.init()
         layout.scrollDirection = .horizontal
         collection.setCollectionViewLayout(layout, animated: false)
-        //        collection.backgroundColor = .brown
+//                collection.backgroundColor = .brown
         return collection
+    }()
+    
+    private lazy var simulationButton: UIButton = {
+       let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Faça sua simulação", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 19)
+        button.setTitleColor(.black, for: .normal)
+        button.addTarget(self, action: #selector(tappedSimulationButton), for: .touchUpInside)
+//        button.backgroundColor = .blue
+        return button
     }()
     
     private lazy var quemEMelhor: UILabel = {
@@ -122,6 +149,15 @@ class HomeScreen: UIView {
         
     }()
     
+    private lazy var completeResultButton: UIButton = {
+       let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Conferir resultado completo", for: .normal)
+        button.setTitleColor(.black, for: .normal)
+        button.backgroundColor = .blue
+        return button
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         addElements()
@@ -134,18 +170,36 @@ class HomeScreen: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    @objc func tappedSimulationButton(){
+        delegate?.actionSimulationButton()
+    }
+    
     private func addElements() {
         
-        addSubview(scrollView)
-        scrollView.addSubview(contentView)
-        contentView.addSubview(bemVindoLabel)
-        contentView.addSubview(userNameLabel)
-        contentView.addSubview(destaquesLabel)
-        contentView.addSubview(destaquesCollection)
-        contentView.addSubview(quemEMelhor)
-        contentView.addSubview(dueloCollection)
-        contentView.addSubview(resultadosDaTemporada)
-        contentView.addSubview(tableView)
+//        addSubview(scrollView)
+//        addSubview(contentView)
+//        addSubview(stackView)
+//        stackView.addArrangedSubview(bemVindoLabel)
+//        stackView.addArrangedSubview(userNameLabel)
+//        stackView.addArrangedSubview(destaquesLabel)
+//        stackView.addArrangedSubview(destaquesCollection)
+//        stackView.addArrangedSubview(simulationButton)
+//        stackView.addArrangedSubview(quemEMelhor)
+//        stackView.addArrangedSubview(dueloCollection)
+//        stackView.addArrangedSubview(resultadosDaTemporada)
+//        stackView.addArrangedSubview(tableView)
+//        stackView.addArrangedSubview(completeResultButton)
+
+        addSubview(bemVindoLabel)
+        addSubview(userNameLabel)
+        addSubview(destaquesLabel)
+        addSubview(destaquesCollection)
+        addSubview(simulationButton)
+        addSubview(quemEMelhor)
+        addSubview(dueloCollection)
+        addSubview(resultadosDaTemporada)
+        addSubview(tableView)
+        addSubview(completeResultButton)
         
     }
     
@@ -171,15 +225,21 @@ class HomeScreen: UIView {
     private func setUpConstraints() {
         NSLayoutConstraint.activate([
             
-            scrollView.topAnchor.constraint(equalTo: topAnchor),
-            scrollView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            scrollView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            scrollView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            
-            contentView.topAnchor.constraint(equalTo: scrollView.topAnchor),
-            contentView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
-            contentView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
-            contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
+//            scrollView.topAnchor.constraint(equalTo: topAnchor),
+//            scrollView.leadingAnchor.constraint(equalTo: leadingAnchor),
+//            scrollView.trailingAnchor.constraint(equalTo: trailingAnchor),
+//            scrollView.bottomAnchor.constraint(equalTo: bottomAnchor),
+//
+//            contentView.topAnchor.constraint(equalTo: topAnchor),
+//            contentView.leadingAnchor.constraint(equalTo: leadingAnchor),
+//            contentView.trailingAnchor.constraint(equalTo: trailingAnchor),
+//            contentView.bottomAnchor.constraint(equalTo: bottomAnchor),
+//
+//
+//            stackView.topAnchor.constraint(equalTo: topAnchor),
+//            stackView.leadingAnchor.constraint(equalTo: leadingAnchor),
+//            stackView.trailingAnchor.constraint(equalTo: trailingAnchor),
+//            stackView.bottomAnchor.constraint(equalTo: bottomAnchor),
             
             bemVindoLabel.topAnchor.constraint(equalTo: topAnchor, constant: 70),
             bemVindoLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
@@ -211,7 +271,12 @@ class HomeScreen: UIView {
             dueloCollection.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
             dueloCollection.heightAnchor.constraint(equalToConstant: 200),
             
-            resultadosDaTemporada.topAnchor.constraint(equalTo: dueloCollection.bottomAnchor, constant: 9),
+            simulationButton.topAnchor.constraint(equalTo: dueloCollection.bottomAnchor, constant: 5),
+            simulationButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 220),
+            simulationButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -5),
+            simulationButton.heightAnchor.constraint(equalToConstant: 20),
+            
+            resultadosDaTemporada.topAnchor.constraint(equalTo: simulationButton.bottomAnchor, constant: 15),
             resultadosDaTemporada.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             resultadosDaTemporada.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -130),
             resultadosDaTemporada.heightAnchor.constraint(equalToConstant: 20),
@@ -220,6 +285,11 @@ class HomeScreen: UIView {
             tableView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
+            
+            completeResultButton.topAnchor.constraint(equalTo: tableView.bottomAnchor, constant: 5),
+            completeResultButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 150),
+            completeResultButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -5),
+            completeResultButton.heightAnchor.constraint(equalToConstant: 20),
         ])
     }
     

@@ -12,7 +12,7 @@ class CustomDriversTableViewScreen: UIView {
     lazy var positionLabel: UILabel = {
         let positionLabel = UILabel()
         positionLabel.translatesAutoresizingMaskIntoConstraints = false
-        positionLabel.font = UIFont.systemFont(ofSize: 25)
+        positionLabel.font = UIFont.systemFont(ofSize: 27)
         return positionLabel
     }()
         
@@ -56,7 +56,6 @@ class CustomDriversTableViewScreen: UIView {
         return pts
     }()
 
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.addSubViews()
@@ -66,7 +65,6 @@ class CustomDriversTableViewScreen: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
     
     private func addSubViews(){
         addSubview(positionLabel)
@@ -82,7 +80,6 @@ class CustomDriversTableViewScreen: UIView {
             
             positionLabel.topAnchor.constraint(equalTo: topAnchor, constant: 20),
             positionLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15),
-            positionLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
 
             photoDriverImageView.topAnchor.constraint(equalTo: topAnchor, constant: 10),
             photoDriverImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 40),

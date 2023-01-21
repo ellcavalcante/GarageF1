@@ -74,22 +74,22 @@ class DestaquesCollectionViewCellScreen: UIView {
     private func setUpConstraints() {
         NSLayoutConstraint.activate([
         
-            pilot1.topAnchor.constraint(equalTo: topAnchor, constant: 60),
-            pilot1.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 160),
+            pilot1.topAnchor.constraint(equalTo: topAnchor, constant: 90),
+            pilot1.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 170),
             pilot1.trailingAnchor.constraint(equalTo: trailingAnchor),
             pilot1.heightAnchor.constraint(equalToConstant: 100),
             
-            namePilot1.topAnchor.constraint(equalTo: indicePilot.bottomAnchor, constant: 5),
+            namePilot1.topAnchor.constraint(equalTo: indicePilot.bottomAnchor, constant: 30),
             namePilot1.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
             namePilot1.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -130),
          
             
-            indicePilot.topAnchor.constraint(equalTo: topAnchor, constant: 5),
+            indicePilot.topAnchor.constraint(equalTo: topAnchor, constant: 10),
             indicePilot.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-            indicePilot.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -250),
+            indicePilot.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -230),
             
             
-            nameTeams.topAnchor.constraint(equalTo: namePilot1.bottomAnchor, constant: 4),
+            nameTeams.topAnchor.constraint(equalTo: namePilot1.bottomAnchor, constant: 2),
             nameTeams.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
             nameTeams.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -130),
         
