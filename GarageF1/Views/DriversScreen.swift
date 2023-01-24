@@ -30,8 +30,6 @@ class DriversScreen: UIView {
         let label = UIButton()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.backgroundColor = .gray
-   //     label.addTarget(DriversInfoViewController.self, action: #selector(buttonAction), for: .touchUpInside)
-        // Precisa colocar a cor certa
         return label
     }()
     
