@@ -45,6 +45,9 @@
 		0BBE0288297CAB4400D19D12 /* RacingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBE0287297CAB4400D19D12 /* RacingVC.swift */; };
 		0BCE0FDD296A03F900902EF5 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCE0FDC296A03F900902EF5 /* HomeVC.swift */; };
 		0BF8A825296CE2AF0058D545 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF8A824296CE2AF0058D545 /* HomeScreen.swift */; };
+		1CD44CC729800D7B00E4B9DD /* DriversHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD44CC629800D7B00E4B9DD /* DriversHistory.swift */; };
+		1CD44CCA298010EF00E4B9DD /* HistoryDriversTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD44CC9298010EF00E4B9DD /* HistoryDriversTableViewCell.swift */; };
+		1CD44CCC2980189C00E4B9DD /* CustomHistoryDriversViewSrceen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD44CCB2980189C00E4B9DD /* CustomHistoryDriversViewSrceen.swift */; };
 		27260257834CDAC8ADA3A004 /* Pods_GarageF1Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88589B93D518063277FE39F1 /* Pods_GarageF1Tests.framework */; };
 		42203D6C8C41ED82A930F3AD /* Pods_GarageF1_GarageF1UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42DB2EDD8970C0DCE7889C00 /* Pods_GarageF1_GarageF1UITests.framework */; };
 		FC2BCADB64BF26B1BFBC721E /* Pods_GarageF1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE68D6E48C5DE82B7C22780F /* Pods_GarageF1.framework */; };
@@ -112,6 +115,9 @@
 		0BCE0FDC296A03F900902EF5 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		0BD59C982966633300788062 /* GarageF1Release.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GarageF1Release.entitlements; sourceTree = "<group>"; };
 		0BF8A824296CE2AF0058D545 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		1CD44CC629800D7B00E4B9DD /* DriversHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriversHistory.swift; sourceTree = "<group>"; };
+		1CD44CC9298010EF00E4B9DD /* HistoryDriversTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDriversTableViewCell.swift; sourceTree = "<group>"; };
+		1CD44CCB2980189C00E4B9DD /* CustomHistoryDriversViewSrceen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHistoryDriversViewSrceen.swift; sourceTree = "<group>"; };
 		41F02849E9FEF0A860392A8B /* Pods-GarageF1Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GarageF1Tests.release.xcconfig"; path = "Target Support Files/Pods-GarageF1Tests/Pods-GarageF1Tests.release.xcconfig"; sourceTree = "<group>"; };
 		42DB2EDD8970C0DCE7889C00 /* Pods_GarageF1_GarageF1UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GarageF1_GarageF1UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		88589B93D518063277FE39F1 /* Pods_GarageF1Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GarageF1Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -249,6 +255,7 @@
 				0BA8BC34297483CD003B2D9C /* HomeResults.swift */,
 				0BB50D2A2978C8ED009CD502 /* HomeDuel.swift */,
 				0BB40049297B63A7004BB3F5 /* Drivers.swift */,
+				1CD44CC629800D7B00E4B9DD /* DriversHistory.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -265,6 +272,7 @@
 		0BAD883629591EF900CCC859 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1CD44CC8298010C000E4B9DD /* HistoryDrivers-TableView-Cell */,
 				0BB40044297B616D004BB3F5 /* Drivers-TableView-Cell */,
 				0BB40043297B6145004BB3F5 /* Home-Collection-TableView-Cell */,
 				0BBE0283297CA7D700D19D12 /* HistoryScreen.swift */,
@@ -305,6 +313,15 @@
 				0BB50D282978B3B8009CD502 /* DueloCollectionViewCell.swift */,
 			);
 			path = DueloCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		1CD44CC8298010C000E4B9DD /* HistoryDrivers-TableView-Cell */ = {
+			isa = PBXGroup;
+			children = (
+				1CD44CC9298010EF00E4B9DD /* HistoryDriversTableViewCell.swift */,
+				1CD44CCB2980189C00E4B9DD /* CustomHistoryDriversViewSrceen.swift */,
+			);
+			path = "HistoryDrivers-TableView-Cell";
 			sourceTree = "<group>";
 		};
 		91A02B297241DA5154415BCE /* Frameworks */ = {
@@ -570,8 +587,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BBE0284297CA7D700D19D12 /* HistoryScreen.swift in Sources */,
+				1CD44CCC2980189C00E4B9DD /* CustomHistoryDriversViewSrceen.swift in Sources */,
 				0BBE0286297CAB1700D19D12 /* RacingScreen.swift in Sources */,
 				0B10DD54295A878000CB397A /* RegisterLoginScreen.swift in Sources */,
+				1CD44CC729800D7B00E4B9DD /* DriversHistory.swift in Sources */,
 				0BBE0282297CA7BB00D19D12 /* HistoryVC.swift in Sources */,
 				0B4CC6212953E90800D29D4C /* AppDelegate.swift in Sources */,
 				0BA8BC2E29744CEC003B2D9C /* HomeRacer.swift in Sources */,
@@ -580,6 +599,7 @@
 				0BA8BC3129747CF6003B2D9C /* ResultsTableViewScreen.swift in Sources */,
 				0BB40042297B5CF5004BB3F5 /* DriversVC.swift in Sources */,
 				0B10DD50295A5AB300CB397A /* EmailLoginVC.swift in Sources */,
+				1CD44CCA298010EF00E4B9DD /* HistoryDriversTableViewCell.swift in Sources */,
 				0BF8A825296CE2AF0058D545 /* HomeScreen.swift in Sources */,
 				0BA8BC35297483CD003B2D9C /* HomeResults.swift in Sources */,
 				0B23C44F297396F70080D242 /* DestaquesCollectionViewCell.swift in Sources */,
@@ -698,7 +718,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -752,7 +772,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
